@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://WarlockSoft/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="CrearProyecto" targetNamespace="http://WarlockSoft/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/WarlockSoft/CrearProyecto?xsd=1" namespace="http://WarlockSoft/" />
+    </xsd:schema>
+  </types>
+  <message name="ObtenerProyectos">
+    <part name="parameters" element="tns:ObtenerProyectos" />
+  </message>
+  <message name="ObtenerProyectosResponse">
+    <part name="parameters" element="tns:ObtenerProyectosResponse" />
+  </message>
+  <message name="SQLException">
+    <part name="fault" element="tns:SQLException" />
+  </message>
+  <message name="GuardarProyecto">
+    <part name="parameters" element="tns:GuardarProyecto" />
+  </message>
+  <message name="GuardarProyectoResponse">
+    <part name="parameters" element="tns:GuardarProyectoResponse" />
+  </message>
+  <message name="ObtenerIDProyecto">
+    <part name="parameters" element="tns:ObtenerIDProyecto" />
+  </message>
+  <message name="ObtenerIDProyectoResponse">
+    <part name="parameters" element="tns:ObtenerIDProyectoResponse" />
+  </message>
+  <portType name="CrearProyecto">
+    <operation name="ObtenerProyectos">
+      <input wsam:Action="http://WarlockSoft/CrearProyecto/ObtenerProyectosRequest" message="tns:ObtenerProyectos" />
+      <output wsam:Action="http://WarlockSoft/CrearProyecto/ObtenerProyectosResponse" message="tns:ObtenerProyectosResponse" />
+      <fault wsam:Action="http://WarlockSoft/CrearProyecto/ObtenerProyectos/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="GuardarProyecto">
+      <input wsam:Action="http://WarlockSoft/CrearProyecto/GuardarProyectoRequest" message="tns:GuardarProyecto" />
+      <output wsam:Action="http://WarlockSoft/CrearProyecto/GuardarProyectoResponse" message="tns:GuardarProyectoResponse" />
+      <fault wsam:Action="http://WarlockSoft/CrearProyecto/GuardarProyecto/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="ObtenerIDProyecto">
+      <input wsam:Action="http://WarlockSoft/CrearProyecto/ObtenerIDProyectoRequest" message="tns:ObtenerIDProyecto" />
+      <output wsam:Action="http://WarlockSoft/CrearProyecto/ObtenerIDProyectoResponse" message="tns:ObtenerIDProyectoResponse" />
+      <fault wsam:Action="http://WarlockSoft/CrearProyecto/ObtenerIDProyecto/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+  </portType>
+  <binding name="CrearProyectoPortBinding" type="tns:CrearProyecto">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="ObtenerProyectos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="GuardarProyecto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="ObtenerIDProyecto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="CrearProyecto">
+    <port name="CrearProyectoPort" binding="tns:CrearProyectoPortBinding">
+      <soap:address location="http://localhost:8080/WarlockSoft/CrearProyecto" />
+    </port>
+  </service>
+</definitions>

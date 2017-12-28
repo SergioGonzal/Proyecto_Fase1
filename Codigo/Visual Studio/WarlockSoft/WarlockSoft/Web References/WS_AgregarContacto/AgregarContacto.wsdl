@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://WarlockSoft/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="AgregarContacto" targetNamespace="http://WarlockSoft/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/WarlockSoft/AgregarContacto?xsd=1" namespace="http://WarlockSoft/" />
+    </xsd:schema>
+  </types>
+  <message name="ComprobarAmistad">
+    <part name="parameters" element="tns:ComprobarAmistad" />
+  </message>
+  <message name="ComprobarAmistadResponse">
+    <part name="parameters" element="tns:ComprobarAmistadResponse" />
+  </message>
+  <message name="SQLException">
+    <part name="fault" element="tns:SQLException" />
+  </message>
+  <message name="GuardarAmigo">
+    <part name="parameters" element="tns:GuardarAmigo" />
+  </message>
+  <message name="GuardarAmigoResponse">
+    <part name="parameters" element="tns:GuardarAmigoResponse" />
+  </message>
+  <message name="ObtenerListaContactos">
+    <part name="parameters" element="tns:ObtenerListaContactos" />
+  </message>
+  <message name="ObtenerListaContactosResponse">
+    <part name="parameters" element="tns:ObtenerListaContactosResponse" />
+  </message>
+  <message name="ObtenerNombreUsuario">
+    <part name="parameters" element="tns:ObtenerNombreUsuario" />
+  </message>
+  <message name="ObtenerNombreUsuarioResponse">
+    <part name="parameters" element="tns:ObtenerNombreUsuarioResponse" />
+  </message>
+  <portType name="AgregarContacto">
+    <operation name="ComprobarAmistad">
+      <input wsam:Action="http://WarlockSoft/AgregarContacto/ComprobarAmistadRequest" message="tns:ComprobarAmistad" />
+      <output wsam:Action="http://WarlockSoft/AgregarContacto/ComprobarAmistadResponse" message="tns:ComprobarAmistadResponse" />
+      <fault wsam:Action="http://WarlockSoft/AgregarContacto/ComprobarAmistad/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="GuardarAmigo">
+      <input wsam:Action="http://WarlockSoft/AgregarContacto/GuardarAmigoRequest" message="tns:GuardarAmigo" />
+      <output wsam:Action="http://WarlockSoft/AgregarContacto/GuardarAmigoResponse" message="tns:GuardarAmigoResponse" />
+      <fault wsam:Action="http://WarlockSoft/AgregarContacto/GuardarAmigo/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="ObtenerListaContactos">
+      <input wsam:Action="http://WarlockSoft/AgregarContacto/ObtenerListaContactosRequest" message="tns:ObtenerListaContactos" />
+      <output wsam:Action="http://WarlockSoft/AgregarContacto/ObtenerListaContactosResponse" message="tns:ObtenerListaContactosResponse" />
+      <fault wsam:Action="http://WarlockSoft/AgregarContacto/ObtenerListaContactos/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="ObtenerNombreUsuario">
+      <input wsam:Action="http://WarlockSoft/AgregarContacto/ObtenerNombreUsuarioRequest" message="tns:ObtenerNombreUsuario" />
+      <output wsam:Action="http://WarlockSoft/AgregarContacto/ObtenerNombreUsuarioResponse" message="tns:ObtenerNombreUsuarioResponse" />
+      <fault wsam:Action="http://WarlockSoft/AgregarContacto/ObtenerNombreUsuario/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+  </portType>
+  <binding name="AgregarContactoPortBinding" type="tns:AgregarContacto">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="ComprobarAmistad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="GuardarAmigo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="ObtenerListaContactos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="ObtenerNombreUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="AgregarContacto">
+    <port name="AgregarContactoPort" binding="tns:AgregarContactoPortBinding">
+      <soap:address location="http://localhost:8080/WarlockSoft/AgregarContacto" />
+    </port>
+  </service>
+</definitions>

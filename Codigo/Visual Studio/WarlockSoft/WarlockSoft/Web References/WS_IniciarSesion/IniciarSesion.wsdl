@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://WarlockSoft/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="IniciarSesion" targetNamespace="http://WarlockSoft/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/WarlockSoft/IniciarSesion?xsd=1" namespace="http://WarlockSoft/" />
+    </xsd:schema>
+  </types>
+  <message name="CompararContrasena">
+    <part name="parameters" element="tns:CompararContrasena" />
+  </message>
+  <message name="CompararContrasenaResponse">
+    <part name="parameters" element="tns:CompararContrasenaResponse" />
+  </message>
+  <message name="SQLException">
+    <part name="fault" element="tns:SQLException" />
+  </message>
+  <message name="BuscarCorreo">
+    <part name="parameters" element="tns:BuscarCorreo" />
+  </message>
+  <message name="BuscarCorreoResponse">
+    <part name="parameters" element="tns:BuscarCorreoResponse" />
+  </message>
+  <message name="ObtenerID">
+    <part name="parameters" element="tns:ObtenerID" />
+  </message>
+  <message name="ObtenerIDResponse">
+    <part name="parameters" element="tns:ObtenerIDResponse" />
+  </message>
+  <portType name="IniciarSesion">
+    <operation name="CompararContrasena">
+      <input wsam:Action="http://WarlockSoft/IniciarSesion/CompararContrasenaRequest" message="tns:CompararContrasena" />
+      <output wsam:Action="http://WarlockSoft/IniciarSesion/CompararContrasenaResponse" message="tns:CompararContrasenaResponse" />
+      <fault wsam:Action="http://WarlockSoft/IniciarSesion/CompararContrasena/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="BuscarCorreo">
+      <input wsam:Action="http://WarlockSoft/IniciarSesion/BuscarCorreoRequest" message="tns:BuscarCorreo" />
+      <output wsam:Action="http://WarlockSoft/IniciarSesion/BuscarCorreoResponse" message="tns:BuscarCorreoResponse" />
+      <fault wsam:Action="http://WarlockSoft/IniciarSesion/BuscarCorreo/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="ObtenerID">
+      <input wsam:Action="http://WarlockSoft/IniciarSesion/ObtenerIDRequest" message="tns:ObtenerID" />
+      <output wsam:Action="http://WarlockSoft/IniciarSesion/ObtenerIDResponse" message="tns:ObtenerIDResponse" />
+      <fault wsam:Action="http://WarlockSoft/IniciarSesion/ObtenerID/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+  </portType>
+  <binding name="IniciarSesionPortBinding" type="tns:IniciarSesion">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="CompararContrasena">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="BuscarCorreo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="ObtenerID">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="IniciarSesion">
+    <port name="IniciarSesionPort" binding="tns:IniciarSesionPortBinding">
+      <soap:address location="http://localhost:8080/WarlockSoft/IniciarSesion" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://WarlockSoft/" targetNamespace="http://WarlockSoft/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="GuardarProyecto" type="tns:GuardarProyecto" />
+  <xs:element name="GuardarProyectoResponse" type="tns:GuardarProyectoResponse" />
+  <xs:element name="ObtenerIDProyecto" type="tns:ObtenerIDProyecto" />
+  <xs:element name="ObtenerIDProyectoResponse" type="tns:ObtenerIDProyectoResponse" />
+  <xs:element name="ObtenerProyectos" type="tns:ObtenerProyectos" />
+  <xs:element name="ObtenerProyectosResponse" type="tns:ObtenerProyectosResponse" />
+  <xs:element name="SQLException" type="tns:SQLException" />
+  <xs:complexType name="ObtenerProyectos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IDUsuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerProyectosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SQLException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SQLState" type="xs:string" />
+      <xs:element name="errorCode" type="xs:int" />
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+      <xs:element minOccurs="0" name="nextException" type="tns:sqlException" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sqlException">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:exception">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="nextException" type="tns:sqlException" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="exception">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:throwable">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="throwable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="stackTrace" nillable="true" type="tns:stackTraceElement" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="stackTraceElement" final="extension restriction">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="GuardarProyecto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaInicio" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaFin" type="xs:string" />
+      <xs:element minOccurs="0" name="IDUsuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GuardarProyectoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerIDProyecto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="NombreProyecto" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerIDProyectoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

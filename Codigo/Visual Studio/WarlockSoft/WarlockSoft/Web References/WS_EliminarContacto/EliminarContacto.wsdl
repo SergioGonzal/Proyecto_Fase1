@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://WarlockSoft/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="EliminarContacto" targetNamespace="http://WarlockSoft/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/WarlockSoft/EliminarContacto?xsd=1" namespace="http://WarlockSoft/" />
+    </xsd:schema>
+  </types>
+  <message name="ObtenerIDUsuario">
+    <part name="parameters" element="tns:ObtenerIDUsuario" />
+  </message>
+  <message name="ObtenerIDUsuarioResponse">
+    <part name="parameters" element="tns:ObtenerIDUsuarioResponse" />
+  </message>
+  <message name="SQLException">
+    <part name="fault" element="tns:SQLException" />
+  </message>
+  <message name="EliminarAmigo">
+    <part name="parameters" element="tns:EliminarAmigo" />
+  </message>
+  <message name="EliminarAmigoResponse">
+    <part name="parameters" element="tns:EliminarAmigoResponse" />
+  </message>
+  <portType name="EliminarContacto">
+    <operation name="ObtenerIDUsuario">
+      <input wsam:Action="http://WarlockSoft/EliminarContacto/ObtenerIDUsuarioRequest" message="tns:ObtenerIDUsuario" />
+      <output wsam:Action="http://WarlockSoft/EliminarContacto/ObtenerIDUsuarioResponse" message="tns:ObtenerIDUsuarioResponse" />
+      <fault wsam:Action="http://WarlockSoft/EliminarContacto/ObtenerIDUsuario/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="EliminarAmigo">
+      <input wsam:Action="http://WarlockSoft/EliminarContacto/EliminarAmigoRequest" message="tns:EliminarAmigo" />
+      <output wsam:Action="http://WarlockSoft/EliminarContacto/EliminarAmigoResponse" message="tns:EliminarAmigoResponse" />
+      <fault wsam:Action="http://WarlockSoft/EliminarContacto/EliminarAmigo/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+  </portType>
+  <binding name="EliminarContactoPortBinding" type="tns:EliminarContacto">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="ObtenerIDUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="EliminarAmigo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="EliminarContacto">
+    <port name="EliminarContactoPort" binding="tns:EliminarContactoPortBinding">
+      <soap:address location="http://localhost:8080/WarlockSoft/EliminarContacto" />
+    </port>
+  </service>
+</definitions>

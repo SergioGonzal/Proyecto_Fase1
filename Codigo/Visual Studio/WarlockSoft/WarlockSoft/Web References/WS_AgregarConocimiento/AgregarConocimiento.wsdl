@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://WarlockSoft/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="AgregarConocimiento" targetNamespace="http://WarlockSoft/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/WarlockSoft/AgregarConocimiento?xsd=1" namespace="http://WarlockSoft/" />
+    </xsd:schema>
+  </types>
+  <message name="ObtenerConocimientos">
+    <part name="parameters" element="tns:ObtenerConocimientos" />
+  </message>
+  <message name="ObtenerConocimientosResponse">
+    <part name="parameters" element="tns:ObtenerConocimientosResponse" />
+  </message>
+  <message name="SQLException">
+    <part name="fault" element="tns:SQLException" />
+  </message>
+  <message name="ObtenerIDHabilidad">
+    <part name="parameters" element="tns:ObtenerIDHabilidad" />
+  </message>
+  <message name="ObtenerIDHabilidadResponse">
+    <part name="parameters" element="tns:ObtenerIDHabilidadResponse" />
+  </message>
+  <message name="GuardarConocimiento">
+    <part name="parameters" element="tns:GuardarConocimiento" />
+  </message>
+  <message name="GuardarConocimientoResponse">
+    <part name="parameters" element="tns:GuardarConocimientoResponse" />
+  </message>
+  <message name="ObtenerIDConocimientosUsuario">
+    <part name="parameters" element="tns:ObtenerIDConocimientosUsuario" />
+  </message>
+  <message name="ObtenerIDConocimientosUsuarioResponse">
+    <part name="parameters" element="tns:ObtenerIDConocimientosUsuarioResponse" />
+  </message>
+  <message name="ObtenerKarmaConocimientosUsuario">
+    <part name="parameters" element="tns:ObtenerKarmaConocimientosUsuario" />
+  </message>
+  <message name="ObtenerKarmaConocimientosUsuarioResponse">
+    <part name="parameters" element="tns:ObtenerKarmaConocimientosUsuarioResponse" />
+  </message>
+  <message name="VerificarConocimiento">
+    <part name="parameters" element="tns:VerificarConocimiento" />
+  </message>
+  <message name="VerificarConocimientoResponse">
+    <part name="parameters" element="tns:VerificarConocimientoResponse" />
+  </message>
+  <message name="ObtenerIDConocimiento">
+    <part name="parameters" element="tns:ObtenerIDConocimiento" />
+  </message>
+  <message name="ObtenerIDConocimientoResponse">
+    <part name="parameters" element="tns:ObtenerIDConocimientoResponse" />
+  </message>
+  <message name="VerificarHabilidad">
+    <part name="parameters" element="tns:VerificarHabilidad" />
+  </message>
+  <message name="VerificarHabilidadResponse">
+    <part name="parameters" element="tns:VerificarHabilidadResponse" />
+  </message>
+  <message name="ObtenerConocimientosUsuario">
+    <part name="parameters" element="tns:ObtenerConocimientosUsuario" />
+  </message>
+  <message name="ObtenerConocimientosUsuarioResponse">
+    <part name="parameters" element="tns:ObtenerConocimientosUsuarioResponse" />
+  </message>
+  <message name="GuardarHabilidad">
+    <part name="parameters" element="tns:GuardarHabilidad" />
+  </message>
+  <message name="GuardarHabilidadResponse">
+    <part name="parameters" element="tns:GuardarHabilidadResponse" />
+  </message>
+  <portType name="AgregarConocimiento">
+    <operation name="ObtenerConocimientos">
+      <input wsam:Action="http://WarlockSoft/AgregarConocimiento/ObtenerConocimientosRequest" message="tns:ObtenerConocimientos" />
+      <output wsam:Action="http://WarlockSoft/AgregarConocimiento/ObtenerConocimientosResponse" message="tns:ObtenerConocimientosResponse" />
+      <fault wsam:Action="http://WarlockSoft/AgregarConocimiento/ObtenerConocimientos/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="ObtenerIDHabilidad">
+      <input wsam:Action="http://WarlockSoft/AgregarConocimiento/ObtenerIDHabilidadRequest" message="tns:ObtenerIDHabilidad" />
+      <output wsam:Action="http://WarlockSoft/AgregarConocimiento/ObtenerIDHabilidadResponse" message="tns:ObtenerIDHabilidadResponse" />
+      <fault wsam:Action="http://WarlockSoft/AgregarConocimiento/ObtenerIDHabilidad/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="GuardarConocimiento">
+      <input wsam:Action="http://WarlockSoft/AgregarConocimiento/GuardarConocimientoRequest" message="tns:GuardarConocimiento" />
+      <output wsam:Action="http://WarlockSoft/AgregarConocimiento/GuardarConocimientoResponse" message="tns:GuardarConocimientoResponse" />
+      <fault wsam:Action="http://WarlockSoft/AgregarConocimiento/GuardarConocimiento/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="ObtenerIDConocimientosUsuario">
+      <input wsam:Action="http://WarlockSoft/AgregarConocimiento/ObtenerIDConocimientosUsuarioRequest" message="tns:ObtenerIDConocimientosUsuario" />
+      <output wsam:Action="http://WarlockSoft/AgregarConocimiento/ObtenerIDConocimientosUsuarioResponse" message="tns:ObtenerIDConocimientosUsuarioResponse" />
+      <fault wsam:Action="http://WarlockSoft/AgregarConocimiento/ObtenerIDConocimientosUsuario/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="ObtenerKarmaConocimientosUsuario">
+      <input wsam:Action="http://WarlockSoft/AgregarConocimiento/ObtenerKarmaConocimientosUsuarioRequest" message="tns:ObtenerKarmaConocimientosUsuario" />
+      <output wsam:Action="http://WarlockSoft/AgregarConocimiento/ObtenerKarmaConocimientosUsuarioResponse" message="tns:ObtenerKarmaConocimientosUsuarioResponse" />
+      <fault wsam:Action="http://WarlockSoft/AgregarConocimiento/ObtenerKarmaConocimientosUsuario/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="VerificarConocimiento">
+      <input wsam:Action="http://WarlockSoft/AgregarConocimiento/VerificarConocimientoRequest" message="tns:VerificarConocimiento" />
+      <output wsam:Action="http://WarlockSoft/AgregarConocimiento/VerificarConocimientoResponse" message="tns:VerificarConocimientoResponse" />
+      <fault wsam:Action="http://WarlockSoft/AgregarConocimiento/VerificarConocimiento/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="ObtenerIDConocimiento">
+      <input wsam:Action="http://WarlockSoft/AgregarConocimiento/ObtenerIDConocimientoRequest" message="tns:ObtenerIDConocimiento" />
+      <output wsam:Action="http://WarlockSoft/AgregarConocimiento/ObtenerIDConocimientoResponse" message="tns:ObtenerIDConocimientoResponse" />
+      <fault wsam:Action="http://WarlockSoft/AgregarConocimiento/ObtenerIDConocimiento/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="VerificarHabilidad">
+      <input wsam:Action="http://WarlockSoft/AgregarConocimiento/VerificarHabilidadRequest" message="tns:VerificarHabilidad" />
+      <output wsam:Action="http://WarlockSoft/AgregarConocimiento/VerificarHabilidadResponse" message="tns:VerificarHabilidadResponse" />
+      <fault wsam:Action="http://WarlockSoft/AgregarConocimiento/VerificarHabilidad/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="ObtenerConocimientosUsuario">
+      <input wsam:Action="http://WarlockSoft/AgregarConocimiento/ObtenerConocimientosUsuarioRequest" message="tns:ObtenerConocimientosUsuario" />
+      <output wsam:Action="http://WarlockSoft/AgregarConocimiento/ObtenerConocimientosUsuarioResponse" message="tns:ObtenerConocimientosUsuarioResponse" />
+      <fault wsam:Action="http://WarlockSoft/AgregarConocimiento/ObtenerConocimientosUsuario/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="GuardarHabilidad">
+      <input wsam:Action="http://WarlockSoft/AgregarConocimiento/GuardarHabilidadRequest" message="tns:GuardarHabilidad" />
+      <output wsam:Action="http://WarlockSoft/AgregarConocimiento/GuardarHabilidadResponse" message="tns:GuardarHabilidadResponse" />
+      <fault wsam:Action="http://WarlockSoft/AgregarConocimiento/GuardarHabilidad/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+  </portType>
+  <binding name="AgregarConocimientoPortBinding" type="tns:AgregarConocimiento">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="ObtenerConocimientos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="ObtenerIDHabilidad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="GuardarConocimiento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="ObtenerIDConocimientosUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="ObtenerKarmaConocimientosUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="VerificarConocimiento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="ObtenerIDConocimiento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="VerificarHabilidad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="ObtenerConocimientosUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="GuardarHabilidad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="AgregarConocimiento">
+    <port name="AgregarConocimientoPort" binding="tns:AgregarConocimientoPortBinding">
+      <soap:address location="http://localhost:8080/WarlockSoft/AgregarConocimiento" />
+    </port>
+  </service>
+</definitions>

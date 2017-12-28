@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://WarlockSoft/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="BuscarUsuario" targetNamespace="http://WarlockSoft/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/WarlockSoft/BuscarUsuario?xsd=1" namespace="http://WarlockSoft/" />
+    </xsd:schema>
+  </types>
+  <message name="ObtenerID2">
+    <part name="parameters" element="tns:ObtenerID2" />
+  </message>
+  <message name="ObtenerID2Response">
+    <part name="parameters" element="tns:ObtenerID2Response" />
+  </message>
+  <message name="SQLException">
+    <part name="fault" element="tns:SQLException" />
+  </message>
+  <message name="BuscarNickName">
+    <part name="parameters" element="tns:BuscarNickName" />
+  </message>
+  <message name="BuscarNickNameResponse">
+    <part name="parameters" element="tns:BuscarNickNameResponse" />
+  </message>
+  <portType name="BuscarUsuario">
+    <operation name="ObtenerID2">
+      <input wsam:Action="http://WarlockSoft/BuscarUsuario/ObtenerID2Request" message="tns:ObtenerID2" />
+      <output wsam:Action="http://WarlockSoft/BuscarUsuario/ObtenerID2Response" message="tns:ObtenerID2Response" />
+      <fault wsam:Action="http://WarlockSoft/BuscarUsuario/ObtenerID2/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="BuscarNickName">
+      <input wsam:Action="http://WarlockSoft/BuscarUsuario/BuscarNickNameRequest" message="tns:BuscarNickName" />
+      <output wsam:Action="http://WarlockSoft/BuscarUsuario/BuscarNickNameResponse" message="tns:BuscarNickNameResponse" />
+      <fault wsam:Action="http://WarlockSoft/BuscarUsuario/BuscarNickName/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+  </portType>
+  <binding name="BuscarUsuarioPortBinding" type="tns:BuscarUsuario">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="ObtenerID2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="BuscarNickName">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="BuscarUsuario">
+    <port name="BuscarUsuarioPort" binding="tns:BuscarUsuarioPortBinding">
+      <soap:address location="http://localhost:8080/WarlockSoft/BuscarUsuario" />
+    </port>
+  </service>
+</definitions>

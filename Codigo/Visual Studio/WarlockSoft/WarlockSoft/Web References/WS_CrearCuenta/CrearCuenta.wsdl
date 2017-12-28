@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://WarlockSoft/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="CrearCuenta" targetNamespace="http://WarlockSoft/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/WarlockSoft/CrearCuenta?xsd=1" namespace="http://WarlockSoft/" />
+    </xsd:schema>
+  </types>
+  <message name="BuscarNick">
+    <part name="parameters" element="tns:BuscarNick" />
+  </message>
+  <message name="BuscarNickResponse">
+    <part name="parameters" element="tns:BuscarNickResponse" />
+  </message>
+  <message name="SQLException">
+    <part name="fault" element="tns:SQLException" />
+  </message>
+  <message name="AgregarCuenta">
+    <part name="parameters" element="tns:AgregarCuenta" />
+  </message>
+  <message name="AgregarCuentaResponse">
+    <part name="parameters" element="tns:AgregarCuentaResponse" />
+  </message>
+  <message name="BuscarCorreo">
+    <part name="parameters" element="tns:BuscarCorreo" />
+  </message>
+  <message name="BuscarCorreoResponse">
+    <part name="parameters" element="tns:BuscarCorreoResponse" />
+  </message>
+  <portType name="CrearCuenta">
+    <operation name="BuscarNick">
+      <input wsam:Action="http://WarlockSoft/CrearCuenta/BuscarNickRequest" message="tns:BuscarNick" />
+      <output wsam:Action="http://WarlockSoft/CrearCuenta/BuscarNickResponse" message="tns:BuscarNickResponse" />
+      <fault wsam:Action="http://WarlockSoft/CrearCuenta/BuscarNick/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="AgregarCuenta">
+      <input wsam:Action="http://WarlockSoft/CrearCuenta/AgregarCuentaRequest" message="tns:AgregarCuenta" />
+      <output wsam:Action="http://WarlockSoft/CrearCuenta/AgregarCuentaResponse" message="tns:AgregarCuentaResponse" />
+      <fault wsam:Action="http://WarlockSoft/CrearCuenta/AgregarCuenta/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="BuscarCorreo">
+      <input wsam:Action="http://WarlockSoft/CrearCuenta/BuscarCorreoRequest" message="tns:BuscarCorreo" />
+      <output wsam:Action="http://WarlockSoft/CrearCuenta/BuscarCorreoResponse" message="tns:BuscarCorreoResponse" />
+      <fault wsam:Action="http://WarlockSoft/CrearCuenta/BuscarCorreo/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+  </portType>
+  <binding name="CrearCuentaPortBinding" type="tns:CrearCuenta">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="BuscarNick">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="AgregarCuenta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="BuscarCorreo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="CrearCuenta">
+    <port name="CrearCuentaPort" binding="tns:CrearCuentaPortBinding">
+      <soap:address location="http://localhost:8080/WarlockSoft/CrearCuenta" />
+    </port>
+  </service>
+</definitions>

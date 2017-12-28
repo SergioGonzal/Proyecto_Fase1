@@ -1,0 +1,42 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WarlockSoft.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="WarlockSoft_WS_IniciarSesion_IniciarSesion" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8080/WarlockSoft/IniciarSesion</Value>
+    </Setting>
+    <Setting Name="WarlockSoft_WS_CrearCuenta_CrearCuenta" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8080/WarlockSoft/CrearCuenta</Value>
+    </Setting>
+    <Setting Name="WarlockSoft_WS_BuscarUsuario_BuscarUsuario" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8080/WarlockSoft/BuscarUsuario</Value>
+    </Setting>
+    <Setting Name="WarlockSoft_VerPerfil_VerPerfil" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8080/WarlockSoft/VerPerfil</Value>
+    </Setting>
+    <Setting Name="WarlockSoft_PublicarEstado_PublicarEstado" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8080/WarlockSoft/PublicarEstado</Value>
+    </Setting>
+    <Setting Name="WarlockSoft_WS_AgregarConocimiento_AgregarConocimiento" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8080/WarlockSoft/AgregarConocimiento</Value>
+    </Setting>
+    <Setting Name="WarlockSoft_WS_EliminarConocimiento_EliminarConocimiento" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8080/WarlockSoft/EliminarConocimiento</Value>
+    </Setting>
+    <Setting Name="WarlockSoft_WS_VotarConocimiento_VotarConocimiento" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8080/WarlockSoft/VotarConocimiento</Value>
+    </Setting>
+    <Setting Name="WarlockSoft_WS_AgregarContacto_AgregarContacto" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8080/WarlockSoft/AgregarContacto</Value>
+    </Setting>
+    <Setting Name="WarlockSoft_WS_EliminarContacto_EliminarContacto" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8080/WarlockSoft/EliminarContacto</Value>
+    </Setting>
+    <Setting Name="WarlockSoft_WS_CrearProyecto_CrearProyecto" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8080/WarlockSoft/CrearProyecto</Value>
+    </Setting>
+    <Setting Name="WarlockSoft_WS_AgregarTareaProyecto_CrearTareaProyecto" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8080/WarlockSoft/CrearTareaProyecto</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

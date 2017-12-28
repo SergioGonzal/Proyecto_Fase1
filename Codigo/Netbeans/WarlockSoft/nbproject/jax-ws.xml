@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
+  <services>
+    <service name="IniciarSesion">
+      <implementation-class>WarlockSoft.IniciarSesion</implementation-class>
+    </service>
+    <service name="CrearCuenta">
+      <implementation-class>WarlockSoft.CrearCuenta</implementation-class>
+    </service>
+    <service name="BuscarUsuario">
+      <implementation-class>WarlockSoft.BuscarUsuario</implementation-class>
+    </service>
+    <service name="VerPerfil">
+      <implementation-class>WarlockSoft.VerPerfil</implementation-class>
+    </service>
+    <service name="PublicarEstado">
+      <implementation-class>WarlockSoft.PublicarEstado</implementation-class>
+    </service>
+    <service name="AgregarConocimiento">
+      <implementation-class>WarlockSoft.AgregarConocimiento</implementation-class>
+    </service>
+    <service name="EliminarConocimiento">
+      <implementation-class>WarlockSoft.EliminarConocimiento</implementation-class>
+    </service>
+    <service name="VotarConocimiento">
+      <implementation-class>WarlockSoft.VotarConocimiento</implementation-class>
+    </service>
+    <service name="AgregarContacto">
+      <implementation-class>WarlockSoft.AgregarContacto</implementation-class>
+    </service>
+    <service name="EliminarContacto">
+      <implementation-class>WarlockSoft.EliminarContacto</implementation-class>
+    </service>
+    <service name="CrearProyecto">
+      <implementation-class>WarlockSoft.CrearProyecto</implementation-class>
+    </service>
+    <service name="CrearTareaProyecto">
+      <implementation-class>WarlockSoft.CrearTareaProyecto</implementation-class>
+    </service>
+  </services>
+  <clients/>
+</jax-ws>

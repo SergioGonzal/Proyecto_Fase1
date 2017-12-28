@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://WarlockSoft/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="VotarConocimiento" targetNamespace="http://WarlockSoft/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/WarlockSoft/VotarConocimiento?xsd=1" namespace="http://WarlockSoft/" />
+    </xsd:schema>
+  </types>
+  <message name="Votar">
+    <part name="parameters" element="tns:Votar" />
+  </message>
+  <message name="VotarResponse">
+    <part name="parameters" element="tns:VotarResponse" />
+  </message>
+  <message name="SQLException">
+    <part name="fault" element="tns:SQLException" />
+  </message>
+  <message name="ObtenerKarmaConocimiento">
+    <part name="parameters" element="tns:ObtenerKarmaConocimiento" />
+  </message>
+  <message name="ObtenerKarmaConocimientoResponse">
+    <part name="parameters" element="tns:ObtenerKarmaConocimientoResponse" />
+  </message>
+  <portType name="VotarConocimiento">
+    <operation name="Votar">
+      <input wsam:Action="http://WarlockSoft/VotarConocimiento/VotarRequest" message="tns:Votar" />
+      <output wsam:Action="http://WarlockSoft/VotarConocimiento/VotarResponse" message="tns:VotarResponse" />
+      <fault wsam:Action="http://WarlockSoft/VotarConocimiento/Votar/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="ObtenerKarmaConocimiento">
+      <input wsam:Action="http://WarlockSoft/VotarConocimiento/ObtenerKarmaConocimientoRequest" message="tns:ObtenerKarmaConocimiento" />
+      <output wsam:Action="http://WarlockSoft/VotarConocimiento/ObtenerKarmaConocimientoResponse" message="tns:ObtenerKarmaConocimientoResponse" />
+      <fault wsam:Action="http://WarlockSoft/VotarConocimiento/ObtenerKarmaConocimiento/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+  </portType>
+  <binding name="VotarConocimientoPortBinding" type="tns:VotarConocimiento">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="Votar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="ObtenerKarmaConocimiento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="VotarConocimiento">
+    <port name="VotarConocimientoPort" binding="tns:VotarConocimientoPortBinding">
+      <soap:address location="http://localhost:8080/WarlockSoft/VotarConocimiento" />
+    </port>
+  </service>
+</definitions>

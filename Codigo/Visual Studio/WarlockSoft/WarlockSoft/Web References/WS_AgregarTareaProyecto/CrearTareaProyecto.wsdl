@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://WarlockSoft/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="CrearTareaProyecto" targetNamespace="http://WarlockSoft/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/WarlockSoft/CrearTareaProyecto?xsd=1" namespace="http://WarlockSoft/" />
+    </xsd:schema>
+  </types>
+  <message name="ObtenerTareasProyecto">
+    <part name="parameters" element="tns:ObtenerTareasProyecto" />
+  </message>
+  <message name="ObtenerTareasProyectoResponse">
+    <part name="parameters" element="tns:ObtenerTareasProyectoResponse" />
+  </message>
+  <message name="SQLException">
+    <part name="fault" element="tns:SQLException" />
+  </message>
+  <message name="GuardarTareaProyecto">
+    <part name="parameters" element="tns:GuardarTareaProyecto" />
+  </message>
+  <message name="GuardarTareaProyectoResponse">
+    <part name="parameters" element="tns:GuardarTareaProyectoResponse" />
+  </message>
+  <portType name="CrearTareaProyecto">
+    <operation name="ObtenerTareasProyecto">
+      <input wsam:Action="http://WarlockSoft/CrearTareaProyecto/ObtenerTareasProyectoRequest" message="tns:ObtenerTareasProyecto" />
+      <output wsam:Action="http://WarlockSoft/CrearTareaProyecto/ObtenerTareasProyectoResponse" message="tns:ObtenerTareasProyectoResponse" />
+      <fault wsam:Action="http://WarlockSoft/CrearTareaProyecto/ObtenerTareasProyecto/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="GuardarTareaProyecto">
+      <input wsam:Action="http://WarlockSoft/CrearTareaProyecto/GuardarTareaProyectoRequest" message="tns:GuardarTareaProyecto" />
+      <output wsam:Action="http://WarlockSoft/CrearTareaProyecto/GuardarTareaProyectoResponse" message="tns:GuardarTareaProyectoResponse" />
+      <fault wsam:Action="http://WarlockSoft/CrearTareaProyecto/GuardarTareaProyecto/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+  </portType>
+  <binding name="CrearTareaProyectoPortBinding" type="tns:CrearTareaProyecto">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="ObtenerTareasProyecto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="GuardarTareaProyecto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="CrearTareaProyecto">
+    <port name="CrearTareaProyectoPort" binding="tns:CrearTareaProyectoPortBinding">
+      <soap:address location="http://localhost:8080/WarlockSoft/CrearTareaProyecto" />
+    </port>
+  </service>
+</definitions>

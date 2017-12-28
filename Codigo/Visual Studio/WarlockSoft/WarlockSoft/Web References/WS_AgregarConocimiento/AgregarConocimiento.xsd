@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://WarlockSoft/" targetNamespace="http://WarlockSoft/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="GuardarConocimiento" type="tns:GuardarConocimiento" />
+  <xs:element name="GuardarConocimientoResponse" type="tns:GuardarConocimientoResponse" />
+  <xs:element name="GuardarHabilidad" type="tns:GuardarHabilidad" />
+  <xs:element name="GuardarHabilidadResponse" type="tns:GuardarHabilidadResponse" />
+  <xs:element name="ObtenerConocimientos" type="tns:ObtenerConocimientos" />
+  <xs:element name="ObtenerConocimientosResponse" type="tns:ObtenerConocimientosResponse" />
+  <xs:element name="ObtenerConocimientosUsuario" type="tns:ObtenerConocimientosUsuario" />
+  <xs:element name="ObtenerConocimientosUsuarioResponse" type="tns:ObtenerConocimientosUsuarioResponse" />
+  <xs:element name="ObtenerIDConocimiento" type="tns:ObtenerIDConocimiento" />
+  <xs:element name="ObtenerIDConocimientoResponse" type="tns:ObtenerIDConocimientoResponse" />
+  <xs:element name="ObtenerIDConocimientosUsuario" type="tns:ObtenerIDConocimientosUsuario" />
+  <xs:element name="ObtenerIDConocimientosUsuarioResponse" type="tns:ObtenerIDConocimientosUsuarioResponse" />
+  <xs:element name="ObtenerIDHabilidad" type="tns:ObtenerIDHabilidad" />
+  <xs:element name="ObtenerIDHabilidadResponse" type="tns:ObtenerIDHabilidadResponse" />
+  <xs:element name="ObtenerKarmaConocimientosUsuario" type="tns:ObtenerKarmaConocimientosUsuario" />
+  <xs:element name="ObtenerKarmaConocimientosUsuarioResponse" type="tns:ObtenerKarmaConocimientosUsuarioResponse" />
+  <xs:element name="SQLException" type="tns:SQLException" />
+  <xs:element name="VerificarConocimiento" type="tns:VerificarConocimiento" />
+  <xs:element name="VerificarConocimientoResponse" type="tns:VerificarConocimientoResponse" />
+  <xs:element name="VerificarHabilidad" type="tns:VerificarHabilidad" />
+  <xs:element name="VerificarHabilidadResponse" type="tns:VerificarHabilidadResponse" />
+  <xs:complexType name="ObtenerConocimientos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ObtenerConocimientosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SQLException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SQLState" type="xs:string" />
+      <xs:element name="errorCode" type="xs:int" />
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+      <xs:element minOccurs="0" name="nextException" type="tns:sqlException" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sqlException">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:exception">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="nextException" type="tns:sqlException" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="exception">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:throwable">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="throwable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="stackTrace" nillable="true" type="tns:stackTraceElement" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="stackTraceElement" final="extension restriction">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="GuardarConocimiento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Conocimiento" type="xs:string" />
+      <xs:element minOccurs="0" name="Usuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GuardarConocimientoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerConocimientosUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IDConocimientos" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerConocimientosUsuarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerKarmaConocimientosUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Usuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerKarmaConocimientosUsuarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="VerificarConocimiento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Conocimiento" type="xs:string" />
+      <xs:element minOccurs="0" name="Usuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="VerificarConocimientoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerIDHabilidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Conocimiento" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerIDHabilidadResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerIDConocimientosUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Usuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerIDConocimientosUsuarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerIDConocimiento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Conocimiento" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerIDConocimientoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="VerificarHabilidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Habilidad" type="xs:string" />
+      <xs:element minOccurs="0" name="Usuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="VerificarHabilidadResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GuardarHabilidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="Habilidad" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GuardarHabilidadResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
