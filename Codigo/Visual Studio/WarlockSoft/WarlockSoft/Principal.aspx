@@ -33,9 +33,7 @@
         <asp:HyperLink ID="hlkCerrar" Style="Z-INDEX: 100; LEFT: 1350px; POSITION: absolute; TOP: 40px" runat="server" Font-Names="Rockwell" NavigateUrl="IniciarSesion.aspx">Cerrar Sesión</asp:HyperLink>
         
         <div class="auto-style1">
-        
-
-
+            <asp:Table ID="tblTimeLine" Style="Z-INDEX: 100; LEFT: 10px; POSITION: absolute; TOP: 10px" runat="server" Width="770px" Height="500px" BackColor="White" BorderStyle="Solid" GridLines="Both"></asp:Table>
         </div>
 
         <asp:ImageButton ID="btnMiPerfil" Style="Z-INDEX: 100; LEFT: 50px; POSITION: absolute; TOP: 150px" runat="server" Height="30px" ImageUrl="Recursos/btnPerfil.png" Width="180px" OnClick="btnMiPerfil_Click" />
@@ -49,6 +47,9 @@
         <asp:ImageButton ID="btnAsociacionN" Style="Z-INDEX: 100; LEFT: 50px; POSITION: absolute; TOP: 550px" runat="server" Height="30px" ImageUrl="Recursos/btnAsociacionN.png" Width="180px" OnClick="btnAsociacionN_Click" />
         <asp:ImageButton ID="btnProyectoN" Style="Z-INDEX: 100; LEFT: 50px; POSITION: absolute; TOP: 600px" runat="server" Height="30px" ImageUrl="Recursos/btnProyectoN.png" Width="180px" OnClick="btnProyectoN_Click" />
         <asp:ImageButton ID="btnTareaN" Style="Z-INDEX: 100; LEFT: 50px; POSITION: absolute; TOP: 650px" runat="server" Height="30px" ImageUrl="Recursos/btnTareaN.png" Width="180px" OnClick="btnTareaN_Click" />
+        
+        
+        <asp:ImageButton ID="imgbtnAdmin" Style="Z-INDEX: 100; LEFT: 867px; POSITION: absolute; TOP: 92px" runat="server" Height="25px" OnClick="imgbtnAdmin_Click" Width="25px" />
         
         
     </form>

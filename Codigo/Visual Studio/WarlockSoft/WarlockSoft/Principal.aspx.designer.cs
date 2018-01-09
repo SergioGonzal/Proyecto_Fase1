@@ -49,6 +49,15 @@ namespace WarlockSoft {
         protected global::System.Web.UI.WebControls.HyperLink hlkCerrar;
         
         /// <summary>
+        /// Control tblTimeLine.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Table tblTimeLine;
+        
+        /// <summary>
         /// Control btnMiPerfil.
         /// </summary>
         /// <remarks>
@@ -146,5 +155,14 @@ namespace WarlockSoft {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton btnTareaN;
+        
+        /// <summary>
+        /// Control imgbtnAdmin.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton imgbtnAdmin;
     }
 }

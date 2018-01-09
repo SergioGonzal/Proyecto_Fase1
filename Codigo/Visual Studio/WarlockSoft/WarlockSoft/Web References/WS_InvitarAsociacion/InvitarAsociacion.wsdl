@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://WarlockSoft/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="InvitarAsociacion" targetNamespace="http://WarlockSoft/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/WarlockSoft/InvitarAsociacion?xsd=1" namespace="http://WarlockSoft/" />
+    </xsd:schema>
+  </types>
+  <message name="EnviarInvitacion">
+    <part name="parameters" element="tns:EnviarInvitacion" />
+  </message>
+  <message name="EnviarInvitacionResponse">
+    <part name="parameters" element="tns:EnviarInvitacionResponse" />
+  </message>
+  <message name="SQLException">
+    <part name="fault" element="tns:SQLException" />
+  </message>
+  <message name="VerificarMiembro">
+    <part name="parameters" element="tns:VerificarMiembro" />
+  </message>
+  <message name="VerificarMiembroResponse">
+    <part name="parameters" element="tns:VerificarMiembroResponse" />
+  </message>
+  <message name="ObtenerRolAsociacion">
+    <part name="parameters" element="tns:ObtenerRolAsociacion" />
+  </message>
+  <message name="ObtenerRolAsociacionResponse">
+    <part name="parameters" element="tns:ObtenerRolAsociacionResponse" />
+  </message>
+  <message name="ObtenerMiembrosAsociacion">
+    <part name="parameters" element="tns:ObtenerMiembrosAsociacion" />
+  </message>
+  <message name="ObtenerMiembrosAsociacionResponse">
+    <part name="parameters" element="tns:ObtenerMiembrosAsociacionResponse" />
+  </message>
+  <portType name="InvitarAsociacion">
+    <operation name="EnviarInvitacion">
+      <input wsam:Action="http://WarlockSoft/InvitarAsociacion/EnviarInvitacionRequest" message="tns:EnviarInvitacion" />
+      <output wsam:Action="http://WarlockSoft/InvitarAsociacion/EnviarInvitacionResponse" message="tns:EnviarInvitacionResponse" />
+      <fault wsam:Action="http://WarlockSoft/InvitarAsociacion/EnviarInvitacion/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="VerificarMiembro">
+      <input wsam:Action="http://WarlockSoft/InvitarAsociacion/VerificarMiembroRequest" message="tns:VerificarMiembro" />
+      <output wsam:Action="http://WarlockSoft/InvitarAsociacion/VerificarMiembroResponse" message="tns:VerificarMiembroResponse" />
+      <fault wsam:Action="http://WarlockSoft/InvitarAsociacion/VerificarMiembro/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="ObtenerRolAsociacion">
+      <input wsam:Action="http://WarlockSoft/InvitarAsociacion/ObtenerRolAsociacionRequest" message="tns:ObtenerRolAsociacion" />
+      <output wsam:Action="http://WarlockSoft/InvitarAsociacion/ObtenerRolAsociacionResponse" message="tns:ObtenerRolAsociacionResponse" />
+      <fault wsam:Action="http://WarlockSoft/InvitarAsociacion/ObtenerRolAsociacion/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="ObtenerMiembrosAsociacion">
+      <input wsam:Action="http://WarlockSoft/InvitarAsociacion/ObtenerMiembrosAsociacionRequest" message="tns:ObtenerMiembrosAsociacion" />
+      <output wsam:Action="http://WarlockSoft/InvitarAsociacion/ObtenerMiembrosAsociacionResponse" message="tns:ObtenerMiembrosAsociacionResponse" />
+      <fault wsam:Action="http://WarlockSoft/InvitarAsociacion/ObtenerMiembrosAsociacion/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+  </portType>
+  <binding name="InvitarAsociacionPortBinding" type="tns:InvitarAsociacion">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="EnviarInvitacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="VerificarMiembro">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="ObtenerRolAsociacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="ObtenerMiembrosAsociacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="InvitarAsociacion">
+    <port name="InvitarAsociacionPort" binding="tns:InvitarAsociacionPortBinding">
+      <soap:address location="http://localhost:8080/WarlockSoft/InvitarAsociacion" />
+    </port>
+  </service>
+</definitions>

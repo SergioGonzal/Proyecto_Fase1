@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://WarlockSoft/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="Denunciar" targetNamespace="http://WarlockSoft/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/WarlockSoft/Denunciar?xsd=1" namespace="http://WarlockSoft/" />
+    </xsd:schema>
+  </types>
+  <message name="ObtenerDenuncias">
+    <part name="parameters" element="tns:ObtenerDenuncias" />
+  </message>
+  <message name="ObtenerDenunciasResponse">
+    <part name="parameters" element="tns:ObtenerDenunciasResponse" />
+  </message>
+  <message name="SQLException">
+    <part name="fault" element="tns:SQLException" />
+  </message>
+  <message name="ObtenerAsociacionD">
+    <part name="parameters" element="tns:ObtenerAsociacionD" />
+  </message>
+  <message name="ObtenerAsociacionDResponse">
+    <part name="parameters" element="tns:ObtenerAsociacionDResponse" />
+  </message>
+  <message name="DenunciarCC">
+    <part name="parameters" element="tns:DenunciarCC" />
+  </message>
+  <message name="DenunciarCCResponse">
+    <part name="parameters" element="tns:DenunciarCCResponse" />
+  </message>
+  <message name="ObtenerPerfilD">
+    <part name="parameters" element="tns:ObtenerPerfilD" />
+  </message>
+  <message name="ObtenerPerfilDResponse">
+    <part name="parameters" element="tns:ObtenerPerfilDResponse" />
+  </message>
+  <message name="ObtenerProyectoD">
+    <part name="parameters" element="tns:ObtenerProyectoD" />
+  </message>
+  <message name="ObtenerProyectoDResponse">
+    <part name="parameters" element="tns:ObtenerProyectoDResponse" />
+  </message>
+  <portType name="Denunciar">
+    <operation name="ObtenerDenuncias">
+      <input wsam:Action="http://WarlockSoft/Denunciar/ObtenerDenunciasRequest" message="tns:ObtenerDenuncias" />
+      <output wsam:Action="http://WarlockSoft/Denunciar/ObtenerDenunciasResponse" message="tns:ObtenerDenunciasResponse" />
+      <fault wsam:Action="http://WarlockSoft/Denunciar/ObtenerDenuncias/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="ObtenerAsociacionD">
+      <input wsam:Action="http://WarlockSoft/Denunciar/ObtenerAsociacionDRequest" message="tns:ObtenerAsociacionD" />
+      <output wsam:Action="http://WarlockSoft/Denunciar/ObtenerAsociacionDResponse" message="tns:ObtenerAsociacionDResponse" />
+      <fault wsam:Action="http://WarlockSoft/Denunciar/ObtenerAsociacionD/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="DenunciarCC">
+      <input wsam:Action="http://WarlockSoft/Denunciar/DenunciarCCRequest" message="tns:DenunciarCC" />
+      <output wsam:Action="http://WarlockSoft/Denunciar/DenunciarCCResponse" message="tns:DenunciarCCResponse" />
+      <fault wsam:Action="http://WarlockSoft/Denunciar/DenunciarCC/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="ObtenerPerfilD">
+      <input wsam:Action="http://WarlockSoft/Denunciar/ObtenerPerfilDRequest" message="tns:ObtenerPerfilD" />
+      <output wsam:Action="http://WarlockSoft/Denunciar/ObtenerPerfilDResponse" message="tns:ObtenerPerfilDResponse" />
+      <fault wsam:Action="http://WarlockSoft/Denunciar/ObtenerPerfilD/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="ObtenerProyectoD">
+      <input wsam:Action="http://WarlockSoft/Denunciar/ObtenerProyectoDRequest" message="tns:ObtenerProyectoD" />
+      <output wsam:Action="http://WarlockSoft/Denunciar/ObtenerProyectoDResponse" message="tns:ObtenerProyectoDResponse" />
+      <fault wsam:Action="http://WarlockSoft/Denunciar/ObtenerProyectoD/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+  </portType>
+  <binding name="DenunciarPortBinding" type="tns:Denunciar">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="ObtenerDenuncias">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="ObtenerAsociacionD">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="DenunciarCC">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="ObtenerPerfilD">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="ObtenerProyectoD">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="Denunciar">
+    <port name="DenunciarPort" binding="tns:DenunciarPortBinding">
+      <soap:address location="http://localhost:8080/WarlockSoft/Denunciar" />
+    </port>
+  </service>
+</definitions>

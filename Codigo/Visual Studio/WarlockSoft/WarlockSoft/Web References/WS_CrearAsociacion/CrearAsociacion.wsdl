@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://WarlockSoft/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="CrearAsociacion" targetNamespace="http://WarlockSoft/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/WarlockSoft/CrearAsociacion?xsd=1" namespace="http://WarlockSoft/" />
+    </xsd:schema>
+  </types>
+  <message name="CreaAsociacion">
+    <part name="parameters" element="tns:CreaAsociacion" />
+  </message>
+  <message name="CreaAsociacionResponse">
+    <part name="parameters" element="tns:CreaAsociacionResponse" />
+  </message>
+  <message name="SQLException">
+    <part name="fault" element="tns:SQLException" />
+  </message>
+  <message name="ObtenerIDAsociacion">
+    <part name="parameters" element="tns:ObtenerIDAsociacion" />
+  </message>
+  <message name="ObtenerIDAsociacionResponse">
+    <part name="parameters" element="tns:ObtenerIDAsociacionResponse" />
+  </message>
+  <message name="ObtenerAsociaciones">
+    <part name="parameters" element="tns:ObtenerAsociaciones" />
+  </message>
+  <message name="ObtenerAsociacionesResponse">
+    <part name="parameters" element="tns:ObtenerAsociacionesResponse" />
+  </message>
+  <portType name="CrearAsociacion">
+    <operation name="CreaAsociacion">
+      <input wsam:Action="http://WarlockSoft/CrearAsociacion/CreaAsociacionRequest" message="tns:CreaAsociacion" />
+      <output wsam:Action="http://WarlockSoft/CrearAsociacion/CreaAsociacionResponse" message="tns:CreaAsociacionResponse" />
+      <fault wsam:Action="http://WarlockSoft/CrearAsociacion/CreaAsociacion/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="ObtenerIDAsociacion">
+      <input wsam:Action="http://WarlockSoft/CrearAsociacion/ObtenerIDAsociacionRequest" message="tns:ObtenerIDAsociacion" />
+      <output wsam:Action="http://WarlockSoft/CrearAsociacion/ObtenerIDAsociacionResponse" message="tns:ObtenerIDAsociacionResponse" />
+      <fault wsam:Action="http://WarlockSoft/CrearAsociacion/ObtenerIDAsociacion/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="ObtenerAsociaciones">
+      <input wsam:Action="http://WarlockSoft/CrearAsociacion/ObtenerAsociacionesRequest" message="tns:ObtenerAsociaciones" />
+      <output wsam:Action="http://WarlockSoft/CrearAsociacion/ObtenerAsociacionesResponse" message="tns:ObtenerAsociacionesResponse" />
+      <fault wsam:Action="http://WarlockSoft/CrearAsociacion/ObtenerAsociaciones/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+  </portType>
+  <binding name="CrearAsociacionPortBinding" type="tns:CrearAsociacion">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="CreaAsociacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="ObtenerIDAsociacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="ObtenerAsociaciones">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="CrearAsociacion">
+    <port name="CrearAsociacionPort" binding="tns:CrearAsociacionPortBinding">
+      <soap:address location="http://localhost:8080/WarlockSoft/CrearAsociacion" />
+    </port>
+  </service>
+</definitions>

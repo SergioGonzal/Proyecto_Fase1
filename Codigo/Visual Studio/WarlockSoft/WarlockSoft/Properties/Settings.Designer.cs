@@ -12,7 +12,7 @@ namespace WarlockSoft.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.3.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.5.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -140,6 +140,116 @@ namespace WarlockSoft.Properties {
         public string WarlockSoft_WS_AgregarTareaProyecto_CrearTareaProyecto {
             get {
                 return ((string)(this["WarlockSoft_WS_AgregarTareaProyecto_CrearTareaProyecto"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:8080/WarlockSoft/CrearAsociacion")]
+        public string WarlockSoft_WS_CrearAsociacion_CrearAsociacion {
+            get {
+                return ((string)(this["WarlockSoft_WS_CrearAsociacion_CrearAsociacion"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:8080/WarlockSoft/InvitarAsociacion")]
+        public string WarlockSoft_WS_InvitarAsociacion_InvitarAsociacion {
+            get {
+                return ((string)(this["WarlockSoft_WS_InvitarAsociacion_InvitarAsociacion"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:8080/WarlockSoft/EliminarMiembro")]
+        public string WarlockSoft_WS_EliminarMiembro_EliminarMiembro {
+            get {
+                return ((string)(this["WarlockSoft_WS_EliminarMiembro_EliminarMiembro"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:8080/WarlockSoft/SolicitarUnionTarea")]
+        public string WarlockSoft_WS_SolicitarUnionTarea_SolicitarUnionTarea {
+            get {
+                return ((string)(this["WarlockSoft_WS_SolicitarUnionTarea_SolicitarUnionTarea"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:8080/WarlockSoft/AdminIngresarUsuarioAsociacion")]
+        public string WarlockSoft_WS_CargarUsuariosAsociaciones_AdminIngresarUsuarioAsociacion {
+            get {
+                return ((string)(this["WarlockSoft_WS_CargarUsuariosAsociaciones_AdminIngresarUsuarioAsociacion"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:8080/WarlockSoft/AdminIngresarEstadoComentario")]
+        public string WarlockSoft_WS_CargaEstadosComentarios_AdminIngresarEstadoComentario {
+            get {
+                return ((string)(this["WarlockSoft_WS_CargaEstadosComentarios_AdminIngresarEstadoComentario"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:8080/WarlockSoft/AdminIngresarProyecto")]
+        public string WarlockSoft_WS_CargarProyectos_AdminIngresarProyecto {
+            get {
+                return ((string)(this["WarlockSoft_WS_CargarProyectos_AdminIngresarProyecto"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:8080/WarlockSoft/MostrarProyectosActivos")]
+        public string WarlockSoft_WS_ObtenerProyectosActivos_MostrarProyectosActivos {
+            get {
+                return ((string)(this["WarlockSoft_WS_ObtenerProyectosActivos_MostrarProyectosActivos"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:8080/WarlockSoft/MostrarTareasEstado")]
+        public string WarlockSoft_WS_MostrarTareasEstado_MostrarTareasEstado {
+            get {
+                return ((string)(this["WarlockSoft_WS_MostrarTareasEstado_MostrarTareasEstado"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:8080/WarlockSoft/Denunciar")]
+        public string WarlockSoft_WS_Denunciar_Denunciar {
+            get {
+                return ((string)(this["WarlockSoft_WS_Denunciar_Denunciar"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:8080/WarlockSoft/Extras")]
+        public string WarlockSoft_WS_Extras_Extras {
+            get {
+                return ((string)(this["WarlockSoft_WS_Extras_Extras"]));
             }
         }
     }

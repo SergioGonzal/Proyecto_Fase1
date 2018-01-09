@@ -1,0 +1,41 @@
+{ 
+	"Proyectos": [
+		{ 
+			"creador": "A;F", 
+			"nombre" : "Ingeniero Espacial",
+			"fechainicio": "2017-12-01", 
+			"fechacierre": "2018-01-01", 
+			"sueldo": "9900.00", 
+			"estado": "activo", 
+			"Tareas": [ 
+				{ 
+					"nombre": "Crear BD", 
+					"descripcion": "crear la BD del software", 
+					"fechainicio": "2017-12-12", 
+					"fechacierre": "2017-12-15", 
+					"estadoactual": "iniciada", 
+					"conocimiento" : "MariaDB",
+					"Asignado": "I;G"
+				}
+				{
+					"nombre": "Diseñar interface", 
+					"descripcion": "crear la inteface del software", 
+					"fechainicio": "2017-12-15", 
+					"fechacierre": "2017-12-20", 
+					"estadoactual": "finalizada", 
+					"conocimiento" : "C",
+					"Asignado": "I;G"
+				}
+				{
+					"nombre": "Programacion", 
+					"descripcion": "programar todo", 
+					"fechainicio": "2017-12-15", 
+					"fechacierre": "2017-12-20", 
+					"estadoactual": "borrador", 
+					"conocimiento" : "JAVA",
+					"Asignado": "A;G"
+				}
+			] 
+		}
+	]
+}

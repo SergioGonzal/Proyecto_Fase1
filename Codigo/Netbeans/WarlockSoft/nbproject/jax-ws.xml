@@ -37,6 +37,48 @@
     <service name="CrearTareaProyecto">
       <implementation-class>WarlockSoft.CrearTareaProyecto</implementation-class>
     </service>
+    <service name="CrearAsociacion">
+      <implementation-class>WarlockSoft.CrearAsociacion</implementation-class>
+    </service>
+    <service name="InvitarAsociacion">
+      <implementation-class>WarlockSoft.InvitarAsociacion</implementation-class>
+    </service>
+    <service name="EliminarMiembro">
+      <implementation-class>WarlockSoft.EliminarMiembro</implementation-class>
+    </service>
+    <service name="SolicitarUnionTarea">
+      <implementation-class>WarlockSoft.SolicitarUnionTarea</implementation-class>
+    </service>
+    <service name="AdminIngresarUsuarioAsociacion">
+      <implementation-class>WarlockSoft.AdminIngresarUsuarioAsociacion</implementation-class>
+    </service>
+    <service name="CrearAsociacion2">
+      <implementation-class>WarlockSoft.CrearAsociacion2</implementation-class>
+    </service>
+    <service name="AdminIngresarEstadoComentario">
+      <implementation-class>WarlockSoft.AdminIngresarEstadoComentario</implementation-class>
+    </service>
+    <service name="CrearEstados2">
+      <implementation-class>WarlockSoft.CrearEstados2</implementation-class>
+    </service>
+    <service name="AdminIngresarProyecto">
+      <implementation-class>WarlockSoft.AdminIngresarProyecto</implementation-class>
+    </service>
+    <service name="CrearProyecto2">
+      <implementation-class>WarlockSoft.CrearProyecto2</implementation-class>
+    </service>
+    <service name="MostrarProyectosActivos">
+      <implementation-class>WarlockSoft.MostrarProyectosActivos</implementation-class>
+    </service>
+    <service name="MostrarTareasEstado">
+      <implementation-class>WarlockSoft.MostrarTareasEstado</implementation-class>
+    </service>
+    <service name="Denunciar">
+      <implementation-class>WarlockSoft.Denunciar</implementation-class>
+    </service>
+    <service name="Extras">
+      <implementation-class>WarlockSoft.Extras</implementation-class>
+    </service>
   </services>
   <clients/>
 </jax-ws>

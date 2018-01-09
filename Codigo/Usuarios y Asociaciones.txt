@@ -1,0 +1,32 @@
+{ 
+	"Usuarios": [
+		{
+			"nombre_completo": "Imanuel Gonzalez",
+			"correo" : "imanuel@SG.com",
+			"nickname": "I;G",
+			"contraseña": "456",
+			"fecha_nacimiento" : "2005-01-01"
+		}
+		{
+			"nombre_completo": "Adriel Gonzalez",
+			"correo" : "adrielG@SG.com",
+			"nickname": "A;G",
+			"contraseña": "123",
+			"fecha_nacimiento" : "2005-01-01"
+		}
+		{
+			"nombre_completo": "Adriel Gonzalez",
+			"correo" : "adrielG@SG.com",
+			"nickname": "A;G",
+			"contraseña": "123",
+			"fecha_nacimiento" : "2005-01-01"
+		}
+	],
+	"Asociaciones": [
+		{
+			"nombre_asociacion": "Revengadores",
+			"objetivo": "revengar :V",
+			"Miembros": [ "S;G", "L;S", "S;S", "L;G" ] 
+		}
+	]
+}

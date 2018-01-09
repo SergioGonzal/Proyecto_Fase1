@@ -38,5 +38,38 @@
     <Setting Name="WarlockSoft_WS_AgregarTareaProyecto_CrearTareaProyecto" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://localhost:8080/WarlockSoft/CrearTareaProyecto</Value>
     </Setting>
+    <Setting Name="WarlockSoft_WS_CrearAsociacion_CrearAsociacion" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8080/WarlockSoft/CrearAsociacion</Value>
+    </Setting>
+    <Setting Name="WarlockSoft_WS_InvitarAsociacion_InvitarAsociacion" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8080/WarlockSoft/InvitarAsociacion</Value>
+    </Setting>
+    <Setting Name="WarlockSoft_WS_EliminarMiembro_EliminarMiembro" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8080/WarlockSoft/EliminarMiembro</Value>
+    </Setting>
+    <Setting Name="WarlockSoft_WS_SolicitarUnionTarea_SolicitarUnionTarea" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8080/WarlockSoft/SolicitarUnionTarea</Value>
+    </Setting>
+    <Setting Name="WarlockSoft_WS_CargarUsuariosAsociaciones_AdminIngresarUsuarioAsociacion" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8080/WarlockSoft/AdminIngresarUsuarioAsociacion</Value>
+    </Setting>
+    <Setting Name="WarlockSoft_WS_CargaEstadosComentarios_AdminIngresarEstadoComentario" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8080/WarlockSoft/AdminIngresarEstadoComentario</Value>
+    </Setting>
+    <Setting Name="WarlockSoft_WS_CargarProyectos_AdminIngresarProyecto" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8080/WarlockSoft/AdminIngresarProyecto</Value>
+    </Setting>
+    <Setting Name="WarlockSoft_WS_ObtenerProyectosActivos_MostrarProyectosActivos" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8080/WarlockSoft/MostrarProyectosActivos</Value>
+    </Setting>
+    <Setting Name="WarlockSoft_WS_MostrarTareasEstado_MostrarTareasEstado" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8080/WarlockSoft/MostrarTareasEstado</Value>
+    </Setting>
+    <Setting Name="WarlockSoft_WS_Denunciar_Denunciar" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8080/WarlockSoft/Denunciar</Value>
+    </Setting>
+    <Setting Name="WarlockSoft_WS_Extras_Extras" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8080/WarlockSoft/Extras</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

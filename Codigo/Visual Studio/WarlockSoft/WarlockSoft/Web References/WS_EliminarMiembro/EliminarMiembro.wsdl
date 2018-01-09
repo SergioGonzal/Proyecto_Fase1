@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://WarlockSoft/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="EliminarMiembro" targetNamespace="http://WarlockSoft/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/WarlockSoft/EliminarMiembro?xsd=1" namespace="http://WarlockSoft/" />
+    </xsd:schema>
+  </types>
+  <message name="EliminarMiembroA">
+    <part name="parameters" element="tns:EliminarMiembroA" />
+  </message>
+  <message name="EliminarMiembroAResponse">
+    <part name="parameters" element="tns:EliminarMiembroAResponse" />
+  </message>
+  <message name="SQLException">
+    <part name="fault" element="tns:SQLException" />
+  </message>
+  <message name="SalirAsociacion">
+    <part name="parameters" element="tns:SalirAsociacion" />
+  </message>
+  <message name="SalirAsociacionResponse">
+    <part name="parameters" element="tns:SalirAsociacionResponse" />
+  </message>
+  <portType name="EliminarMiembro">
+    <operation name="EliminarMiembroA">
+      <input wsam:Action="http://WarlockSoft/EliminarMiembro/EliminarMiembroARequest" message="tns:EliminarMiembroA" />
+      <output wsam:Action="http://WarlockSoft/EliminarMiembro/EliminarMiembroAResponse" message="tns:EliminarMiembroAResponse" />
+      <fault wsam:Action="http://WarlockSoft/EliminarMiembro/EliminarMiembroA/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="SalirAsociacion">
+      <input wsam:Action="http://WarlockSoft/EliminarMiembro/SalirAsociacionRequest" message="tns:SalirAsociacion" />
+      <output wsam:Action="http://WarlockSoft/EliminarMiembro/SalirAsociacionResponse" message="tns:SalirAsociacionResponse" />
+      <fault wsam:Action="http://WarlockSoft/EliminarMiembro/SalirAsociacion/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+  </portType>
+  <binding name="EliminarMiembroPortBinding" type="tns:EliminarMiembro">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="EliminarMiembroA">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="SalirAsociacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="EliminarMiembro">
+    <port name="EliminarMiembroPort" binding="tns:EliminarMiembroPortBinding">
+      <soap:address location="http://localhost:8080/WarlockSoft/EliminarMiembro" />
+    </port>
+  </service>
+</definitions>

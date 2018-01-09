@@ -2,15 +2,19 @@
 <xs:schema xmlns:tns="http://WarlockSoft/" targetNamespace="http://WarlockSoft/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="GuardarTareaProyecto" type="tns:GuardarTareaProyecto" />
   <xs:element name="GuardarTareaProyectoResponse" type="tns:GuardarTareaProyectoResponse" />
+  <xs:element name="ObtenerConocimientosTarea" type="tns:ObtenerConocimientosTarea" />
+  <xs:element name="ObtenerConocimientosTareaResponse" type="tns:ObtenerConocimientosTareaResponse" />
+  <xs:element name="ObtenerEstadoTareasProyecto" type="tns:ObtenerEstadoTareasProyecto" />
+  <xs:element name="ObtenerEstadoTareasProyectoResponse" type="tns:ObtenerEstadoTareasProyectoResponse" />
   <xs:element name="ObtenerTareasProyecto" type="tns:ObtenerTareasProyecto" />
   <xs:element name="ObtenerTareasProyectoResponse" type="tns:ObtenerTareasProyectoResponse" />
   <xs:element name="SQLException" type="tns:SQLException" />
-  <xs:complexType name="ObtenerTareasProyecto">
+  <xs:complexType name="ObtenerEstadoTareasProyecto">
     <xs:sequence>
       <xs:element minOccurs="0" name="IDProyecto" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="ObtenerTareasProyectoResponse">
+  <xs:complexType name="ObtenerEstadoTareasProyectoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -46,6 +50,26 @@
   </xs:complexType>
   <xs:complexType name="stackTraceElement" final="extension restriction">
     <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ObtenerConocimientosTarea">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IDProyecto" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerConocimientosTareaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerTareasProyecto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IDProyecto" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerTareasProyectoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="GuardarTareaProyecto">
     <xs:sequence>

@@ -1,0 +1,35 @@
+{
+	"Comentarios": [
+			{
+				"usuario": "L;G",
+				"Estados": [
+						{
+						"texto": "El sol juega con tu pelo",
+						"Respuestas": [
+								{
+									"usuario": "S;G",
+									"texto": "Bailas y paras el tiempo"
+								}
+								{
+									"usuario": "L;S",
+									"texto": "todos te estan viendo!"
+								}
+							]
+						}
+						{
+						"texto": "la pizza de brocoli sabe bien?",
+						"Respuestas": [
+								{
+									"usuario": "S;S",
+									"texto": "nope"
+								}
+								{
+									"usuario": "L;G",
+									"texto": "o raios! :'("
+								}
+							]
+						}
+					]
+			}
+		]
+}

@@ -29,6 +29,10 @@ namespace WarlockSoft.WS_AgregarTareaProyecto {
     [System.Web.Services.WebServiceBindingAttribute(Name="CrearTareaProyectoPortBinding", Namespace="http://WarlockSoft/")]
     public partial class CrearTareaProyecto : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
+        private System.Threading.SendOrPostCallback ObtenerEstadoTareasProyectoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerConocimientosTareaOperationCompleted;
+        
         private System.Threading.SendOrPostCallback ObtenerTareasProyectoOperationCompleted;
         
         private System.Threading.SendOrPostCallback GuardarTareaProyectoOperationCompleted;
@@ -72,10 +76,76 @@ namespace WarlockSoft.WS_AgregarTareaProyecto {
         }
         
         /// <remarks/>
+        public event ObtenerEstadoTareasProyectoCompletedEventHandler ObtenerEstadoTareasProyectoCompleted;
+        
+        /// <remarks/>
+        public event ObtenerConocimientosTareaCompletedEventHandler ObtenerConocimientosTareaCompleted;
+        
+        /// <remarks/>
         public event ObtenerTareasProyectoCompletedEventHandler ObtenerTareasProyectoCompleted;
         
         /// <remarks/>
         public event GuardarTareaProyectoCompletedEventHandler GuardarTareaProyectoCompleted;
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://WarlockSoft/", ResponseNamespace="http://WarlockSoft/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
+        public string[] ObtenerEstadoTareasProyecto([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string IDProyecto) {
+            object[] results = this.Invoke("ObtenerEstadoTareasProyecto", new object[] {
+                        IDProyecto});
+            return ((string[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerEstadoTareasProyectoAsync(string IDProyecto) {
+            this.ObtenerEstadoTareasProyectoAsync(IDProyecto, null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerEstadoTareasProyectoAsync(string IDProyecto, object userState) {
+            if ((this.ObtenerEstadoTareasProyectoOperationCompleted == null)) {
+                this.ObtenerEstadoTareasProyectoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerEstadoTareasProyectoOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerEstadoTareasProyecto", new object[] {
+                        IDProyecto}, this.ObtenerEstadoTareasProyectoOperationCompleted, userState);
+        }
+        
+        private void OnObtenerEstadoTareasProyectoOperationCompleted(object arg) {
+            if ((this.ObtenerEstadoTareasProyectoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerEstadoTareasProyectoCompleted(this, new ObtenerEstadoTareasProyectoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://WarlockSoft/", ResponseNamespace="http://WarlockSoft/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
+        public string[] ObtenerConocimientosTarea([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string IDProyecto) {
+            object[] results = this.Invoke("ObtenerConocimientosTarea", new object[] {
+                        IDProyecto});
+            return ((string[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerConocimientosTareaAsync(string IDProyecto) {
+            this.ObtenerConocimientosTareaAsync(IDProyecto, null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerConocimientosTareaAsync(string IDProyecto, object userState) {
+            if ((this.ObtenerConocimientosTareaOperationCompleted == null)) {
+                this.ObtenerConocimientosTareaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerConocimientosTareaOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerConocimientosTarea", new object[] {
+                        IDProyecto}, this.ObtenerConocimientosTareaOperationCompleted, userState);
+        }
+        
+        private void OnObtenerConocimientosTareaOperationCompleted(object arg) {
+            if ((this.ObtenerConocimientosTareaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerConocimientosTareaCompleted(this, new ObtenerConocimientosTareaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://WarlockSoft/", ResponseNamespace="http://WarlockSoft/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -161,6 +231,58 @@ namespace WarlockSoft.WS_AgregarTareaProyecto {
                 return true;
             }
             return false;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void ObtenerEstadoTareasProyectoCompletedEventHandler(object sender, ObtenerEstadoTareasProyectoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerEstadoTareasProyectoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerEstadoTareasProyectoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void ObtenerConocimientosTareaCompletedEventHandler(object sender, ObtenerConocimientosTareaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerConocimientosTareaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerConocimientosTareaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string[])(this.results[0]));
+            }
         }
     }
     

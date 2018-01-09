@@ -5,14 +5,26 @@
       <xsd:import schemaLocation="http://localhost:8080/WarlockSoft/CrearTareaProyecto?xsd=1" namespace="http://WarlockSoft/" />
     </xsd:schema>
   </types>
+  <message name="ObtenerEstadoTareasProyecto">
+    <part name="parameters" element="tns:ObtenerEstadoTareasProyecto" />
+  </message>
+  <message name="ObtenerEstadoTareasProyectoResponse">
+    <part name="parameters" element="tns:ObtenerEstadoTareasProyectoResponse" />
+  </message>
+  <message name="SQLException">
+    <part name="fault" element="tns:SQLException" />
+  </message>
+  <message name="ObtenerConocimientosTarea">
+    <part name="parameters" element="tns:ObtenerConocimientosTarea" />
+  </message>
+  <message name="ObtenerConocimientosTareaResponse">
+    <part name="parameters" element="tns:ObtenerConocimientosTareaResponse" />
+  </message>
   <message name="ObtenerTareasProyecto">
     <part name="parameters" element="tns:ObtenerTareasProyecto" />
   </message>
   <message name="ObtenerTareasProyectoResponse">
     <part name="parameters" element="tns:ObtenerTareasProyectoResponse" />
-  </message>
-  <message name="SQLException">
-    <part name="fault" element="tns:SQLException" />
   </message>
   <message name="GuardarTareaProyecto">
     <part name="parameters" element="tns:GuardarTareaProyecto" />
@@ -21,6 +33,16 @@
     <part name="parameters" element="tns:GuardarTareaProyectoResponse" />
   </message>
   <portType name="CrearTareaProyecto">
+    <operation name="ObtenerEstadoTareasProyecto">
+      <input wsam:Action="http://WarlockSoft/CrearTareaProyecto/ObtenerEstadoTareasProyectoRequest" message="tns:ObtenerEstadoTareasProyecto" />
+      <output wsam:Action="http://WarlockSoft/CrearTareaProyecto/ObtenerEstadoTareasProyectoResponse" message="tns:ObtenerEstadoTareasProyectoResponse" />
+      <fault wsam:Action="http://WarlockSoft/CrearTareaProyecto/ObtenerEstadoTareasProyecto/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="ObtenerConocimientosTarea">
+      <input wsam:Action="http://WarlockSoft/CrearTareaProyecto/ObtenerConocimientosTareaRequest" message="tns:ObtenerConocimientosTarea" />
+      <output wsam:Action="http://WarlockSoft/CrearTareaProyecto/ObtenerConocimientosTareaResponse" message="tns:ObtenerConocimientosTareaResponse" />
+      <fault wsam:Action="http://WarlockSoft/CrearTareaProyecto/ObtenerConocimientosTarea/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
     <operation name="ObtenerTareasProyecto">
       <input wsam:Action="http://WarlockSoft/CrearTareaProyecto/ObtenerTareasProyectoRequest" message="tns:ObtenerTareasProyecto" />
       <output wsam:Action="http://WarlockSoft/CrearTareaProyecto/ObtenerTareasProyectoResponse" message="tns:ObtenerTareasProyectoResponse" />
@@ -34,6 +56,30 @@
   </portType>
   <binding name="CrearTareaProyectoPortBinding" type="tns:CrearTareaProyecto">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="ObtenerEstadoTareasProyecto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="ObtenerConocimientosTarea">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
     <operation name="ObtenerTareasProyecto">
       <soap:operation soapAction="" />
       <input>

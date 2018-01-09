@@ -129,12 +129,17 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Amigos.aspx" />
+    <Content Include="Asociacion.aspx" />
+    <Content Include="CargaMasiva.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Denunciar.aspx" />
+    <Content Include="Denuncias.aspx" />
     <Content Include="DetallesProyecto.aspx" />
+    <Content Include="DetalleTarea.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -151,8 +156,13 @@
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="InformacionPerfil.aspx" />
     <Content Include="IniciarSesion.aspx" />
+    <Content Include="Miembros.aspx" />
+    <Content Include="MisAsociaciones.aspx" />
     <Content Include="MisProyectos.aspx" />
+    <Content Include="NuevaAsociacion.aspx" />
     <Content Include="NuevoProyecto.aspx" />
+    <Content Include="Pago.aspx" />
+    <Content Include="PanelAdministrativo.aspx" />
     <Content Include="Perfil.aspx" />
     <Content Include="Principal.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -207,6 +217,20 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Asociacion.aspx.cs">
+      <DependentUpon>Asociacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Asociacion.aspx.designer.cs">
+      <DependentUpon>Asociacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CargaMasiva.aspx.cs">
+      <DependentUpon>CargaMasiva.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CargaMasiva.aspx.designer.cs">
+      <DependentUpon>CargaMasiva.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -221,12 +245,33 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Denunciar.aspx.cs">
+      <DependentUpon>Denunciar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Denunciar.aspx.designer.cs">
+      <DependentUpon>Denunciar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Denuncias.aspx.cs">
+      <DependentUpon>Denuncias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Denuncias.aspx.designer.cs">
+      <DependentUpon>Denuncias.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DetallesProyecto.aspx.cs">
       <DependentUpon>DetallesProyecto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="DetallesProyecto.aspx.designer.cs">
       <DependentUpon>DetallesProyecto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetalleTarea.aspx.cs">
+      <DependentUpon>DetalleTarea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetalleTarea.aspx.designer.cs">
+      <DependentUpon>DetalleTarea.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -245,6 +290,20 @@
     <Compile Include="IniciarSesion.aspx.designer.cs">
       <DependentUpon>IniciarSesion.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Miembros.aspx.cs">
+      <DependentUpon>Miembros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Miembros.aspx.designer.cs">
+      <DependentUpon>Miembros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MisAsociaciones.aspx.cs">
+      <DependentUpon>MisAsociaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MisAsociaciones.aspx.designer.cs">
+      <DependentUpon>MisAsociaciones.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MisProyectos.aspx.cs">
       <DependentUpon>MisProyectos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -252,12 +311,33 @@
     <Compile Include="MisProyectos.aspx.designer.cs">
       <DependentUpon>MisProyectos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="NuevaAsociacion.aspx.cs">
+      <DependentUpon>NuevaAsociacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NuevaAsociacion.aspx.designer.cs">
+      <DependentUpon>NuevaAsociacion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="NuevoProyecto.aspx.cs">
       <DependentUpon>NuevoProyecto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="NuevoProyecto.aspx.designer.cs">
       <DependentUpon>NuevoProyecto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pago.aspx.cs">
+      <DependentUpon>Pago.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pago.aspx.designer.cs">
+      <DependentUpon>Pago.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PanelAdministrativo.aspx.cs">
+      <DependentUpon>PanelAdministrativo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PanelAdministrativo.aspx.designer.cs">
+      <DependentUpon>PanelAdministrativo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Perfil.aspx.cs">
       <DependentUpon>Perfil.aspx</DependentUpon>
@@ -322,7 +402,32 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <Compile Include="Web References\WS_CargaEstadosComentarios\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WS_CargarProyectos\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WS_CargarUsuariosAsociaciones\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WS_CrearAsociacion\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
     <Compile Include="Web References\WS_CrearProyecto\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WS_Denunciar\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -337,7 +442,37 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <Compile Include="Web References\WS_EliminarMiembro\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WS_Extras\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WS_InvitarAsociacion\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WS_MostrarTareasEstado\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WS_ObtenerProyectosActivos\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
     <Compile Include="Web References\WS_PublicarEstado\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WS_SolicitarUnionTarea\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -402,11 +537,51 @@
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Web References\WS_CargaEstadosComentarios\AdminIngresarEstadoComentario.wsdl" />
+    <None Include="Web References\WS_CargaEstadosComentarios\AdminIngresarEstadoComentario.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\WS_CargaEstadosComentarios\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WS_CargarProyectos\AdminIngresarProyecto.wsdl" />
+    <None Include="Web References\WS_CargarProyectos\AdminIngresarProyecto.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\WS_CargarProyectos\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WS_CargarUsuariosAsociaciones\AdminIngresarUsuarioAsociacion.wsdl" />
+    <None Include="Web References\WS_CargarUsuariosAsociaciones\AdminIngresarUsuarioAsociacion.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\WS_CargarUsuariosAsociaciones\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WS_CrearAsociacion\CrearAsociacion.wsdl" />
+    <None Include="Web References\WS_CrearAsociacion\CrearAsociacion.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\WS_CrearAsociacion\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <None Include="Web References\WS_CrearProyecto\CrearProyecto.wsdl" />
     <None Include="Web References\WS_CrearProyecto\CrearProyecto.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Web References\WS_CrearProyecto\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WS_Denunciar\Denunciar.wsdl" />
+    <None Include="Web References\WS_Denunciar\Denunciar.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\WS_Denunciar\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -426,6 +601,46 @@
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Web References\WS_EliminarMiembro\EliminarMiembro.wsdl" />
+    <None Include="Web References\WS_EliminarMiembro\EliminarMiembro.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\WS_EliminarMiembro\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WS_Extras\Extras.wsdl" />
+    <None Include="Web References\WS_Extras\Extras.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\WS_Extras\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WS_InvitarAsociacion\InvitarAsociacion.wsdl" />
+    <None Include="Web References\WS_InvitarAsociacion\InvitarAsociacion.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\WS_InvitarAsociacion\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WS_MostrarTareasEstado\MostrarTareasEstado.wsdl" />
+    <None Include="Web References\WS_MostrarTareasEstado\MostrarTareasEstado.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\WS_MostrarTareasEstado\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WS_ObtenerProyectosActivos\MostrarProyectosActivos.wsdl" />
+    <None Include="Web References\WS_ObtenerProyectosActivos\MostrarProyectosActivos.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\WS_ObtenerProyectosActivos\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <None Include="Web References\WS_PublicarEstado\PublicarEstado.wsdl" />
     <None Include="Web References\WS_PublicarEstado\PublicarEstado.xsd">
       <SubType>Designer</SubType>
@@ -433,6 +648,14 @@
     <None Include="Web References\WS_PublicarEstado\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WS_SolicitarUnionTarea\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WS_SolicitarUnionTarea\SolicitarUnionTarea.wsdl" />
+    <None Include="Web References\WS_SolicitarUnionTarea\SolicitarUnionTarea.xsd">
+      <SubType>Designer</SubType>
     </None>
     <None Include="Web References\WS_VerPerfil\VerPerfil.wsdl" />
     <None Include="Web References\WS_VerPerfil\VerPerfil.xsd">
@@ -484,6 +707,39 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:8080/WarlockSoft/AdminIngresarEstadoComentario%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WS_CargaEstadosComentarios\</RelPath>
+      <UpdateFromURL>http://localhost:8080/WarlockSoft/AdminIngresarEstadoComentario%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WarlockSoft_WS_CargaEstadosComentarios_AdminIngresarEstadoComentario</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:8080/WarlockSoft/AdminIngresarProyecto%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WS_CargarProyectos\</RelPath>
+      <UpdateFromURL>http://localhost:8080/WarlockSoft/AdminIngresarProyecto%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WarlockSoft_WS_CargarProyectos_AdminIngresarProyecto</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:8080/WarlockSoft/AdminIngresarUsuarioAsociacion%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WS_CargarUsuariosAsociaciones\</RelPath>
+      <UpdateFromURL>http://localhost:8080/WarlockSoft/AdminIngresarUsuarioAsociacion%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WarlockSoft_WS_CargarUsuariosAsociaciones_AdminIngresarUsuarioAsociacion</CachedSettingsPropName>
+    </WebReferenceUrl>
     <WebReferenceUrl Include="http://localhost:8080/WarlockSoft/AgregarConocimiento%3fwsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\WS_AgregarConocimiento\</RelPath>
@@ -516,6 +772,17 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>WarlockSoft_WS_BuscarUsuario_BuscarUsuario</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:8080/WarlockSoft/CrearAsociacion%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WS_CrearAsociacion\</RelPath>
+      <UpdateFromURL>http://localhost:8080/WarlockSoft/CrearAsociacion%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WarlockSoft_WS_CrearAsociacion_CrearAsociacion</CachedSettingsPropName>
     </WebReferenceUrl>
     <WebReferenceUrl Include="http://localhost:8080/WarlockSoft/CrearCuenta%3fwsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
@@ -550,6 +817,17 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>WarlockSoft_WS_AgregarTareaProyecto_CrearTareaProyecto</CachedSettingsPropName>
     </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:8080/WarlockSoft/Denunciar%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WS_Denunciar\</RelPath>
+      <UpdateFromURL>http://localhost:8080/WarlockSoft/Denunciar%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WarlockSoft_WS_Denunciar_Denunciar</CachedSettingsPropName>
+    </WebReferenceUrl>
     <WebReferenceUrl Include="http://localhost:8080/WarlockSoft/EliminarConocimiento%3fwsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\WS_EliminarConocimiento\</RelPath>
@@ -572,6 +850,28 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>WarlockSoft_WS_EliminarContacto_EliminarContacto</CachedSettingsPropName>
     </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:8080/WarlockSoft/EliminarMiembro%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WS_EliminarMiembro\</RelPath>
+      <UpdateFromURL>http://localhost:8080/WarlockSoft/EliminarMiembro%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WarlockSoft_WS_EliminarMiembro_EliminarMiembro</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:8080/WarlockSoft/Extras%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WS_Extras\</RelPath>
+      <UpdateFromURL>http://localhost:8080/WarlockSoft/Extras%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WarlockSoft_WS_Extras_Extras</CachedSettingsPropName>
+    </WebReferenceUrl>
     <WebReferenceUrl Include="http://localhost:8080/WarlockSoft/IniciarSesion%3fwsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\WS_IniciarSesion\</RelPath>
@@ -583,6 +883,39 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>WarlockSoft_WS_IniciarSesion_IniciarSesion</CachedSettingsPropName>
     </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:8080/WarlockSoft/InvitarAsociacion%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WS_InvitarAsociacion\</RelPath>
+      <UpdateFromURL>http://localhost:8080/WarlockSoft/InvitarAsociacion%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WarlockSoft_WS_InvitarAsociacion_InvitarAsociacion</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:8080/WarlockSoft/MostrarProyectosActivos%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WS_ObtenerProyectosActivos\</RelPath>
+      <UpdateFromURL>http://localhost:8080/WarlockSoft/MostrarProyectosActivos%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WarlockSoft_WS_ObtenerProyectosActivos_MostrarProyectosActivos</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:8080/WarlockSoft/MostrarTareasEstado%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WS_MostrarTareasEstado\</RelPath>
+      <UpdateFromURL>http://localhost:8080/WarlockSoft/MostrarTareasEstado%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WarlockSoft_WS_MostrarTareasEstado_MostrarTareasEstado</CachedSettingsPropName>
+    </WebReferenceUrl>
     <WebReferenceUrl Include="http://localhost:8080/WarlockSoft/PublicarEstado%3fwsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\WS_PublicarEstado\</RelPath>
@@ -593,6 +926,17 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>WarlockSoft_PublicarEstado_PublicarEstado</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:8080/WarlockSoft/SolicitarUnionTarea%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WS_SolicitarUnionTarea\</RelPath>
+      <UpdateFromURL>http://localhost:8080/WarlockSoft/SolicitarUnionTarea%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WarlockSoft_WS_SolicitarUnionTarea_SolicitarUnionTarea</CachedSettingsPropName>
     </WebReferenceUrl>
     <WebReferenceUrl Include="http://localhost:8080/WarlockSoft/VerPerfil%3fwsdl">
       <UrlBehavior>Dynamic</UrlBehavior>

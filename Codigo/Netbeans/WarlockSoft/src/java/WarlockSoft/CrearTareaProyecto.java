@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package WarlockSoft;
 
 import java.sql.Connection;
@@ -87,6 +82,87 @@ public class CrearTareaProyecto {
             
             while (res.next()){
                 Tareas[ContT]= res.getString("Nombre_Tarea");
+                ContT++;
+            }
+            
+            
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+            System.out.println("Error!");
+        } finally {
+            cx.close();
+            System.out.println("Conexion Cerrada!");
+        }
+        return Tareas;
+    }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "ObtenerConocimientosTarea")
+    public String[] ObtenerConocimientosTarea(@WebParam(name = "IDProyecto") String IDProyecto) throws SQLException {
+        //TODO write your implementation code here:
+        String[] IDTareas = new String [100];
+        String[] Tareas = new String [100];
+        int ContT = 0;
+        Connection cx = Conexion.getConexion();
+        Connection cx1 = Conexion.getConexion();
+        
+        try {
+            PreparedStatement ps = cx.prepareStatement("Select ID_Conocimiento From TAREA Where ID_Proyecto =?");
+            ps.setString(1, IDProyecto);
+            
+            ResultSet res;
+            res = ps.executeQuery();
+            
+            while (res.next()){
+                IDTareas[ContT]= res.getString("ID_Conocimiento");
+                ContT++;
+            }
+            //-----------------------------------------------------------------
+            ContT = 0;
+            while(IDTareas[ContT]!= null)
+            {
+                PreparedStatement ps1 = cx1.prepareStatement("Select Nombre_Conocimiento From CONOCIMIENTO Where ID_Conocimiento =?");
+                ps1.setString(1, IDTareas[ContT]);
+
+                ResultSet res1;
+                res1 = ps1.executeQuery();
+
+                while (res1.next()){
+                    Tareas[ContT]= res1.getString("Nombre_Conocimiento");
+                }
+                ContT++;
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+            System.out.println("Error!");
+        } finally {
+            cx.close();
+            System.out.println("Conexion Cerrada!");
+        }
+        return Tareas;
+    }
+    
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "ObtenerEstadoTareasProyecto")
+    public String[] ObtenerEstadoTareasProyecto(@WebParam(name = "IDProyecto") String IDProyecto) throws SQLException {
+        //TODO write your implementation code here:
+        String[] Tareas = new String [100];
+        int ContT = 0;
+        Connection cx = Conexion.getConexion();
+        
+        try {
+            PreparedStatement ps = cx.prepareStatement("Select Estado From TAREA Where ID_Proyecto =?");
+            ps.setString(1, IDProyecto);
+            
+            ResultSet res;
+            res = ps.executeQuery();
+            
+            while (res.next()){
+                Tareas[ContT]= res.getString("Estado");
                 ContT++;
             }
             

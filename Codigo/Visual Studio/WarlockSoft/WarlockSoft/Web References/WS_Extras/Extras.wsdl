@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://WarlockSoft/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="Extras" targetNamespace="http://WarlockSoft/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/WarlockSoft/Extras?xsd=1" namespace="http://WarlockSoft/" />
+    </xsd:schema>
+  </types>
+  <message name="TerminarProyecto">
+    <part name="parameters" element="tns:TerminarProyecto" />
+  </message>
+  <message name="TerminarProyectoResponse">
+    <part name="parameters" element="tns:TerminarProyectoResponse" />
+  </message>
+  <message name="SQLException">
+    <part name="fault" element="tns:SQLException" />
+  </message>
+  <message name="ObtenerCosto">
+    <part name="parameters" element="tns:ObtenerCosto" />
+  </message>
+  <message name="ObtenerCostoResponse">
+    <part name="parameters" element="tns:ObtenerCostoResponse" />
+  </message>
+  <message name="ObtenerEncargado">
+    <part name="parameters" element="tns:ObtenerEncargado" />
+  </message>
+  <message name="ObtenerEncargadoResponse">
+    <part name="parameters" element="tns:ObtenerEncargadoResponse" />
+  </message>
+  <message name="ObtenerEstadoProyecto">
+    <part name="parameters" element="tns:ObtenerEstadoProyecto" />
+  </message>
+  <message name="ObtenerEstadoProyectoResponse">
+    <part name="parameters" element="tns:ObtenerEstadoProyectoResponse" />
+  </message>
+  <portType name="Extras">
+    <operation name="TerminarProyecto">
+      <input wsam:Action="http://WarlockSoft/Extras/TerminarProyectoRequest" message="tns:TerminarProyecto" />
+      <output wsam:Action="http://WarlockSoft/Extras/TerminarProyectoResponse" message="tns:TerminarProyectoResponse" />
+      <fault wsam:Action="http://WarlockSoft/Extras/TerminarProyecto/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="ObtenerCosto">
+      <input wsam:Action="http://WarlockSoft/Extras/ObtenerCostoRequest" message="tns:ObtenerCosto" />
+      <output wsam:Action="http://WarlockSoft/Extras/ObtenerCostoResponse" message="tns:ObtenerCostoResponse" />
+      <fault wsam:Action="http://WarlockSoft/Extras/ObtenerCosto/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="ObtenerEncargado">
+      <input wsam:Action="http://WarlockSoft/Extras/ObtenerEncargadoRequest" message="tns:ObtenerEncargado" />
+      <output wsam:Action="http://WarlockSoft/Extras/ObtenerEncargadoResponse" message="tns:ObtenerEncargadoResponse" />
+      <fault wsam:Action="http://WarlockSoft/Extras/ObtenerEncargado/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="ObtenerEstadoProyecto">
+      <input wsam:Action="http://WarlockSoft/Extras/ObtenerEstadoProyectoRequest" message="tns:ObtenerEstadoProyecto" />
+      <output wsam:Action="http://WarlockSoft/Extras/ObtenerEstadoProyectoResponse" message="tns:ObtenerEstadoProyectoResponse" />
+      <fault wsam:Action="http://WarlockSoft/Extras/ObtenerEstadoProyecto/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+  </portType>
+  <binding name="ExtrasPortBinding" type="tns:Extras">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="TerminarProyecto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="ObtenerCosto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="ObtenerEncargado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="ObtenerEstadoProyecto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="Extras">
+    <port name="ExtrasPort" binding="tns:ExtrasPortBinding">
+      <soap:address location="http://localhost:8080/WarlockSoft/Extras" />
+    </port>
+  </service>
+</definitions>

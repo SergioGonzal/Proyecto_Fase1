@@ -35,6 +35,7 @@ namespace WarlockSoft
                 Estados = VP.ObtenerEstados(ID);
 
                 btnAñadirContacto.Enabled = false;
+                btnDenunciar.Enabled = false;
 
                 lblUsuario.Text = Nom1;
                 
@@ -97,6 +98,11 @@ namespace WarlockSoft
             Response.Redirect("InformacionPerfil.aspx?ID=" + ID + "&IDv="+ IDv);
         }
 
+        protected void btnDenunciar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Denunciar.aspx?ID=" + ID + "&IDE=" + IDv + "&Elemento=Usuario");
+        }
+
         protected void btnPublicar_Click(object sender, EventArgs e)
         {
             if (txtPublicacion.Text != "")
@@ -104,7 +110,7 @@ namespace WarlockSoft
                 WS_PublicarEstado.PublicarEstado PE = new WS_PublicarEstado.PublicarEstado();
                 PE.GuardarEstado(txtPublicacion.Text, ID);
                 
-                 Response.Redirect("Perfil.aspx?ID=" + ID);
+                Response.Redirect("Perfil.aspx?ID=" + ID);
             }
             else
             {

@@ -35,6 +35,10 @@
         </asp:DropDownList>
         <asp:Button ID="btnVerInfo" Style="Z-INDEX: 100; LEFT: 500px; POSITION: absolute; TOP: 400px" runat="server" Font-Names="Rockwell" OnClick="Button1_Click" Text="Ver Detalles" />
 
+        <asp:Label ID="Label3" Style="Z-INDEX: 100; LEFT: 800px; POSITION: absolute; TOP: 300px" runat="server" Font-Names="Rockwell" Text="Otros Proyectos"></asp:Label>
+        <asp:DropDownList ID="cmbProyectos" Style="Z-INDEX: 100; LEFT: 800px; POSITION: absolute; TOP: 350px" runat="server" Font-Names="Rockwell"></asp:DropDownList>
+        <asp:Button ID="btnVerOtros" Style="Z-INDEX: 100; LEFT: 800px; POSITION: absolute; TOP: 400px" runat="server" Font-Names="Rockwell" Text="Ver Detalles" OnClick="btnVerOtros_Click" />
+
     </form>
 </body>
 </html>

@@ -12,6 +12,7 @@ namespace WarlockSoft
         new String ID = "";
         String IDp = "";
         String[] proyectos = new string[100];
+        String[] Proyectos = new string[100];
         int contP = 0;
         int h = 50;
 
@@ -40,8 +41,19 @@ namespace WarlockSoft
 
                 contP++;
             }
+            contP = 0;
 
-            
+            WS_ObtenerProyectosActivos.MostrarProyectosActivos OPA = new WS_ObtenerProyectosActivos.MostrarProyectosActivos();
+
+            Proyectos = OPA.ObtenerProyectosActivos();
+
+            while (Proyectos[contP] != null)
+            {
+                cmbProyectos.Items.Add(Proyectos[contP]);
+                contP++;
+            }
+
+
         }
 
         protected void btnIcono_Click(object sender, ImageClickEventArgs e)
@@ -53,6 +65,13 @@ namespace WarlockSoft
         {
             WS_CrearProyecto.CrearProyecto CP = new WS_CrearProyecto.CrearProyecto();
             IDp = CP.ObtenerIDProyecto(cmbMisProyectos.SelectedValue);
+            Response.Redirect("DetallesProyecto.aspx?ID=" + ID + "&IDp=" + IDp);
+        }
+
+        protected void btnVerOtros_Click(object sender, EventArgs e)
+        {
+            WS_CrearProyecto.CrearProyecto CP = new WS_CrearProyecto.CrearProyecto();
+            IDp = CP.ObtenerIDProyecto(cmbProyectos.SelectedValue);
             Response.Redirect("DetallesProyecto.aspx?ID=" + ID + "&IDp=" + IDp);
         }
     }
